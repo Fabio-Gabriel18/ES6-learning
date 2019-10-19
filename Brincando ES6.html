@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brincando com ES6</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+ <script type="text/javascript">
+ 	var object = {
+ 		name:"Name",
+ 		arrowGetName: () => this.name,
+ 		regularGetName: function(){return this.name},
+ 		arrowGetThis: () => this,
+ 		regularGetThis: function() {return this}
+
+ 	}
+
+ 	console.log(this.name);
+ 	console.log(object.arrowGetName());
+ 	console.log(object.arrowGetThis());
+ 	console.log(this);
+ 	console.log(object.regularGetThis());
+ 	console.log(object.regularGetName());
+
+ 	console.log("S E P A R A");
+
+ 	class Ponto{
+ 		constructor(x,y){
+ 			this.x=x; this.y=y;
+ 		}
+
+ 		static distancia(a,b){
+ 			const dx = a.x - b.x;
+ 			const dy = a.y - b.y;
+
+ 			return Math.hypot(dx,dy);
+ 		}
+ 	}
+
+ 	const p1 = new Ponto(5,5);
+ 	const p2 = new Ponto(10,10);
+
+ 	p1.distancia;
+ 	p2.distancia;
+
+ 	console.log(Ponto.distancia(p1,p2));
+
+	console.log("S E P A R A");
+
+	var name = "Fabio";
+	var  time = "Hoje";
+
+	console.log('Olá ${name}, como você está ${time}?');
+	
+ </script>
+
+</body>
+</html>
